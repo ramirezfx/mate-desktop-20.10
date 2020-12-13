@@ -25,5 +25,6 @@ RUN curl -fSL "https://download.nomachine.com/download/6.12/Linux/nomachine_6.12
 && dpkg -i nomachine.deb
 
 ADD nxserver.sh /
+RUN chmod +x /nxserver.sh
 
 ENTRYPOINT ["/nxserver.sh"]
