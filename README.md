@@ -4,6 +4,8 @@
 
 `cd mate-desktop-20.10`
 
+Edit the file docker-comose.yml and change username and password.
+
 `docker-compose up -d`
 
 You have 2 methods to access the desktop
@@ -14,10 +16,16 @@ Username:mate
 Password:mate
 Once you are loged-in you can create a new user with su-rights and delete the default mate-user
 
-2) Install x2go-client and connect to the machine via port 2222 and with this credentials:
+2) Install x2go-client and connect to the machine via port 2222 and with the credentials you provided in the docker-compose.yml:
 Username:mate
 Password:mate
 Once you are loged-in you can create a new user with su-rights and delete the default mate-user
+Change the screen-resolution in the control-center
+Change the keyboard-layout in the control-center
+Change the language:
+Open a console and type
+`sudo dpkg-reconfigure locales`
+Log out and log in again
 
 # If you want to build your own image do this:
 
@@ -42,3 +50,9 @@ Connect to the machine with the IP of the server and use this credentials you en
 
 2) Install x2go-client and connect to the machine via port 2222 and with this credentials you entered in docker-compose.yml
 Once you are loged-in you can create a new user with su-rights and delete the default mate-user
+Change the screen-resolution in the control-center
+Change the keyboard-layout in the control-center
+Change the language:
+Open a console and type
+`sudo dpkg-reconfigure locales`
+Log out and log in again
